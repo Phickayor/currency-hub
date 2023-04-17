@@ -29,7 +29,7 @@ function Amount(props) {
         <div className="mx-auto w-10/12 lg:w-6/12 my-12 lg:space-y-10 space-y-5">
             <input
                 type="text"
-                className="bg-gray-700 w-full h-full lg:py-8 py-5 px-5 rounded-xl text-center font-semibold lg:text-2xl text-xl"
+                className="bg-gray-700 text-white w-full h-full lg:py-8 py-5 px-5 rounded-xl text-center font-semibold lg:text-2xl text-xl"
                 placeholder="# 2000"
                 disabled
                 ref={amount}

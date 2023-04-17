@@ -1,3 +1,5 @@
+import { faArrowsUpDown, faLongArrowDown, faLongArrowLeft, faLongArrowRight, faLongArrowUp } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useEffect, useState } from 'react'
 
 function Currencies(props) {
@@ -51,20 +53,20 @@ function Currencies(props) {
 
             </div>
             <div className=" justify-center space-x-1 hidden lg:block">
-                <i className="text-3xl fa fa-arrow-right"></i>
-                <i className="text-3xl fa fa-arrow-left"></i>
+                <FontAwesomeIcon icon={faLongArrowLeft} />
+                <FontAwesomeIcon icon={faLongArrowRight} />
             </div>
-            <div className="flex justify-center space-x-1 lg:hidden">
-                <i className="text-3xl fa fa-arrow-up"></i>
-                <i className="text-3xl fa fa-arrow-down"></i>
+            <div className="flex justify-center space-x-1 lg:hidden text-3xl">
+                <FontAwesomeIcon icon={faLongArrowUp} />
+                <FontAwesomeIcon icon={faLongArrowDown} />
             </div>
             <div className="flex lg:w-full">
                 <label
-                    className="w-1/4  py-4 text-center rounded-l-xl border cursor-pointer flex flex-col justify-center border-slate-500 font-semibold text-xl"
+                    className="w-1/4 py-4 text-center rounded-l-xl border cursor-pointer flex flex-col justify-center border-slate-500 font-semibold text-xl"
                 >
                     {targetcountrycode}
                 </label>
-                <select onChange={Targetname} className="bg-gray-700  py-6 cursor-pointer space-y-10 w-full outline-none h-full lg:text-xl px-5 rounded-r-xl">
+                <select onChange={Targetname} className="bg-gray-700 py-6 cursor-pointer space-y-10 w-full outline-none lg:text-xl px-5 rounded-r-xl">
                     <option defaultValue value="- -">Choose Target Currency</option>
                     {countries.map((country) => (
                         <option
