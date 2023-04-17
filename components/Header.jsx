@@ -3,12 +3,15 @@ import React from 'react'
 function Header() {
     return (
         <div
-            className="w-full sticky top-0 lg:h-36 h-28 backdrop-blur-3xl bg-[url('/images/rates.jpeg')] bg-cover opacity sepia-[.60]"
+            className="w-full sticky top-0 lg:h-36 h-28 backdrop-blur-3xl"
         >
+            <img src='/images/headerbg.jpeg'
+                className="w-full absolute top-0 lg:h-36 h-28 backdrop-blur-3xl object-cover opacity-60 sepia-[.40]"
+            />
             <div
-                className="mx-auto lg:w-6/12 w-11/12 flex flex-col justify-end h-full py-4"
+                className="relative mx-auto w-11/12 flex flex-col justify-end h-full lg:py-4 py-2"
             >
-                <h1 className="text-white  text-4xl lg:text-6xl font-bold text-shadow-2xl">
+                <h1 className="text-4xl font-serif lg:text-6xl font-bold text-shadow-2xl">
                     CURRENCY HUB
                 </h1>
             </div>

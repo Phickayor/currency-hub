@@ -42,7 +42,7 @@ export default function Home() {
         <Currencies baseHandler={baseSetter} targetHandler={targetSetter} />
         <Amount base={base} target={target} finalResultHandler={summaryInfo} />
       </div>
-      <div ref={summaryContainer} className='hidden absolute top-1/2 left-1/2 w-10/12 lg:w-6/12 transform -translate-x-1/2 -translate-y-1/2'>
+      <div ref={summaryContainer} className='hidden absolute top-1/2 left-1/2 w-11/12 md:w-10/12 lg:w-6/12 transform -translate-x-1/2 -translate-y-1/2'>
         <Summary initialAmount={initialAmount} finalAmount={finalAmount} summaryBase={summaryBase} summaryTarget={summaryTarget} exchangeRate={exchangeRate} hideHandler={hide} />
       </div>
     </div>
