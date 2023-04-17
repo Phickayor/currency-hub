@@ -28,8 +28,8 @@ function Summary(props) {
                 <FontAwesomeIcon onClick={test} icon={faClose} className='text-slate-700 bg-white hover:text-white hover:bg-slate-700 px-2 py-1 rounded-full' />
             </div>
 
-            <div className='my-7  text-2xl space-y-5  grid grid-cols-2 mx-auto self-center'>
-                <div className='flex space-x-5'>
+            <div className='my-7 text-2xl space-y-5  lg:grid grid-cols-2 mx-auto self-center'>
+                <div className='flex space-x-5 lg:mt-5'>
                     <h1>Base Currency :</h1>
                     <h1 className='font-semibold'>{summaryBase}</h1>
                 </div>
