@@ -1,10 +1,11 @@
 import { faClose } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 function Summary(props) {
     var initialAmount = props.initialAmount
     var finalAmount = props.finalAmount
+
     var summaryBase = props.summaryBase
     var summaryTarget = props.summaryTarget
     var exchangeRate = props.exchangeRate
@@ -12,6 +13,14 @@ function Summary(props) {
     function test() {
         props.hideHandler()
     }
+    if (finalAmount != undefined) {
+        finalAmount = finalAmount.toFixed(2)
+    }
+    // else if (finalAmount == NaN) {
+    //     alert("Please input a valid Number")
+    //     test()
+    // }
+
     return (
         <div className=' bg-slate-500 rounded-3xl px-10 py-5 '>
             <div className='text-3xl font-sans font-semibold flex justify-between mx-2 ' >
@@ -19,7 +28,7 @@ function Summary(props) {
                 <FontAwesomeIcon onClick={test} icon={faClose} className='text-slate-700 bg-white hover:text-white hover:bg-slate-700 px-2 py-1 rounded-full' />
             </div>
 
-            <div className='my-7 text-2xl space-y-5  mx-auto self-center'>
+            <div className='my-7  text-2xl space-y-5  grid grid-cols-2 mx-auto self-center'>
                 <div className='flex space-x-5'>
                     <h1>Base Currency :</h1>
                     <h1 className='font-semibold'>{summaryBase}</h1>
