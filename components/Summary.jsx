@@ -38,7 +38,7 @@ function Summary(props) {
                 </div>
                 <div className='flex space-x-5'>
                     <h1>Final Result :</h1>
-                    <h1 className='font-semibold'>{finalAmount.toFixed(2)}</h1>
+                    <h1 className='font-semibold'>{finalAmount}</h1>
                 </div>
             </div>
         </div>
