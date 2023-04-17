@@ -5,9 +5,6 @@ import React from 'react'
 function Summary(props) {
     var initialAmount = props.initialAmount
     var finalAmount = props.finalAmount
-    if (finalAmount != undefined) {
-        finalAmount.toFixed(2)
-    }
     var summaryBase = props.summaryBase
     var summaryTarget = props.summaryTarget
     var exchangeRate = props.exchangeRate
@@ -41,7 +38,7 @@ function Summary(props) {
                 </div>
                 <div className='flex space-x-5'>
                     <h1>Final Result :</h1>
-                    <h1 className='font-semibold'>{finalAmount}</h1>
+                    <h1 className='font-semibold'>{finalAmount.toFixed(2)}</h1>
                 </div>
             </div>
         </div>
