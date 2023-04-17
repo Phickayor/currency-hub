@@ -7,12 +7,12 @@ function Currencies(props) {
     function Basename(e) {
         e.preventDefault()
         setBaseCountryCode(e.target.value)
-        props.baseHandler(basecountrycode)
+        props.baseHandler(e.target.value)
     }
     function Targetname(e) {
         e.preventDefault()
         setTargetCountryCode(e.target.value)
-        props.targetHandler(targetcountrycode)
+        props.targetHandler(e.target.value)
     }
 
     useEffect(() => {
