@@ -1,7 +1,6 @@
 import { faBackspace } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useRef } from 'react'
-import Summary from './Summary'
 function Amount(props) {
     const amount = useRef(null)
     const back = <FontAwesomeIcon icon={faBackspace} />
@@ -37,50 +36,52 @@ function Amount(props) {
             <table
                 className="w-full h-72 text-center bg-gray-700 py-5 font-semibold text-4xl rounded-t-3xl"
             >
-                <tr>
-                    <td className="cursor-pointer">
-                        <div onClick={addToInput} className="hover:bg-slate-500 mx-auto w-1/2 p-3">1</div>
-                    </td>
-                    <td className="cursor-pointer">
-                        <div onClick={addToInput} className="hover:bg-slate-500 mx-auto w-1/2 p-3">2</div>
-                    </td>
-                    <td className="cursor-pointer">
-                        <div onClick={addToInput} className="hover:bg-slate-500 mx-auto w-1/2 p-3">3</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td className="cursor-pointer">
-                        <div onClick={addToInput} className="hover:bg-slate-500 mx-auto w-1/2 p-3">4</div>
-                    </td>
-                    <td className="cursor-pointer">
-                        <div onClick={addToInput} className="hover:bg-slate-500 mx-auto w-1/2 p-3">5</div>
-                    </td>
-                    <td className="cursor-pointer">
-                        <div onClick={addToInput} className="hover:bg-slate-500 mx-auto w-1/2 p-3">6</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td className="cursor-pointer">
-                        <div onClick={addToInput} className="hover:bg-slate-500 mx-auto w-1/2 p-3">7</div>
-                    </td>
-                    <td className="cursor-pointer">
-                        <div onClick={addToInput} className="hover:bg-slate-500 mx-auto w-1/2 p-3">8</div>
-                    </td>
-                    <td className="cursor-pointer">
-                        <div onClick={addToInput} className="hover:bg-slate-500 mx-auto w-1/2 p-3">9</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td className="cursor-pointer">
-                        <div onClick={addToInput} className="hover:bg-slate-500 mx-auto w-1/2 p-3">0</div>
-                    </td>
-                    <td className="cursor-pointer">
-                        <div onClick={addToInput} className="hover:bg-slate-500 mx-auto w-1/2 p-3">.</div>
-                    </td>
-                    <td className="cursor-pointer">
-                        <div onClick={removeFromInput} className="hover:bg-slate-500 mx-auto w-1/2 py-3">{back}</div>
-                    </td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td className="cursor-pointer">
+                            <div onClick={addToInput} className="hover:bg-slate-500 mx-auto w-1/2 p-3">1</div>
+                        </td>
+                        <td className="cursor-pointer">
+                            <div onClick={addToInput} className="hover:bg-slate-500 mx-auto w-1/2 p-3">2</div>
+                        </td>
+                        <td className="cursor-pointer">
+                            <div onClick={addToInput} className="hover:bg-slate-500 mx-auto w-1/2 p-3">3</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className="cursor-pointer">
+                            <div onClick={addToInput} className="hover:bg-slate-500 mx-auto w-1/2 p-3">4</div>
+                        </td>
+                        <td className="cursor-pointer">
+                            <div onClick={addToInput} className="hover:bg-slate-500 mx-auto w-1/2 p-3">5</div>
+                        </td>
+                        <td className="cursor-pointer">
+                            <div onClick={addToInput} className="hover:bg-slate-500 mx-auto w-1/2 p-3">6</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className="cursor-pointer">
+                            <div onClick={addToInput} className="hover:bg-slate-500 mx-auto w-1/2 p-3">7</div>
+                        </td>
+                        <td className="cursor-pointer">
+                            <div onClick={addToInput} className="hover:bg-slate-500 mx-auto w-1/2 p-3">8</div>
+                        </td>
+                        <td className="cursor-pointer">
+                            <div onClick={addToInput} className="hover:bg-slate-500 mx-auto w-1/2 p-3">9</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className="cursor-pointer">
+                            <div onClick={addToInput} className="hover:bg-slate-500 mx-auto w-1/2 p-3">0</div>
+                        </td>
+                        <td className="cursor-pointer">
+                            <div onClick={addToInput} className="hover:bg-slate-500 mx-auto w-1/2 p-3">.</div>
+                        </td>
+                        <td className="cursor-pointer">
+                            <div onClick={removeFromInput} className="hover:bg-slate-500 mx-auto w-1/2 py-3">{back}</div>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
             <button onClick={convert} className="bg-gray-700 hover:bg-slate-500 duration-[2s] w-full lg:py-6 py-5 px-5 rounded-xl text-center font-semibold lg:text-2xl text-xl">Convert</button>
         </div >)
